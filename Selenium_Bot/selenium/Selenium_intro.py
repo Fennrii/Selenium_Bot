@@ -43,6 +43,7 @@ def toCsv(url, content):
 	print(len(rows))
 	for i in rows:
 		with open("./csvFiles/" + url.replace("/", "\\") + ".csv", "a") as f:
+			# Removes all html tags and then writes to the csv file
 			f.write(", ".join(re.sub("<.*?>","",str(e)) for e in i) + "\n")
 
 # Makes sure that the Chrome service is installed then sets it as the browser to be interfaced with REDO
