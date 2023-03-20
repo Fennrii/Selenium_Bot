@@ -32,26 +32,21 @@ def toCsv(url, content):
 		f = open("./csvFiles/" + url.replace("/", "\\") + ".csv", "w")
 	f.close()
 	table = content.find_element(By.TAG_NAME, "table")
-	print("table element found")
 	elements = table.get_attribute("innerHTML")
-	print("retrieved elements")
 	soup = BS(elements, features="html.parser")
-	print("Soup made")
 	# Seperates all csv rows by getting the contents of each tr element
 	rows = [tr.find_all('td') for tr in soup.find_all('tr')]
-	print("rows created")
-	print(len(rows))
 	for i in rows:
 		with open("./csvFiles/" + url.replace("/", "\\") + ".csv", "a") as f:
 			# Removes all html tags and then writes to the csv file
 			f.write(", ".join(re.sub("<.*?>","",str(e)) for e in i) + "\n")
 
-# Makes sure that the Chrome service is installed then sets it as the browser to be interfaced with REDO
+# Sleeps to wait for selenium server to be up
 sleep(10)
 
+# connects to the selenium remote server
 options = webdriver.ChromeOptions()
-options.add_argument('--whitelisted-ips')
-options.add_argument('--verbose')
+# options.add_argument('--whitelisted-ips')
 options.add_argument('--disable-dev-shm-usage')
 
 driver = webdriver.Remote('http://selenium:4444/wd/hub', 
@@ -75,7 +70,9 @@ linkList = content.find_elements(By.TAG_NAME, 'a')
 linkCount,  iterCount = 0,0
 visitedLinks = []
 visitedLinks.append("https://www.nextgen.com/api")
-while iterCount < 8:
+
+numLinksToCheck = 5 # change this number to visit more or less unique links 
+while iterCount < numLinksToCheck:
 	link = linkList[linkCount]
 	print("Navigating to: "+link.get_attribute("href"))
 	# Skipps link if it has already been visited, is a file to download, or visits a community page that requires a login

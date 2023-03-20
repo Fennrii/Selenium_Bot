@@ -1,0 +1,98 @@
+APIs for NextGen® Enterprise EHR 5.9.0+
+Section 170.404 Regulatory Information
+Terms of Service
+Fees
+Developer Program fees vary according to the terms specific to each available API Developer Program; the available Developer Programs and their associated fees are detailed below:
+Patient Access API Program: No Fees
+Open Access Developer Program (solely for current NextGen Healthcare clients): No Fees
+API Distributor Program:
+Variable Fees are potentially based on any of the following criteria that are applicable given the intentions & needs of the developer’s application:
+The scope of data access requested1.
+Version of NextGen® Healthcare Enterprise EHR in use by a given NextGen Healthcare client and the corresponding ONC Health IT Certification (e.g. 2015 Edition Cures Update).
+The volume of data categories.
+Application data transaction types, i.e. if the application will have “read-only” vs. “read and write” capabilities when integrated with NextGen Healthcare Client databases.
+1Fees may or may not be charged based on the categorization of data elements needed, such as USCDIv1, EHI not included in USCDIv1, and non-EHI. There is no charge for usage of NextGen® Enterprise EHR API GET routes for certified technology.
+Available Value-Added Services:
+Developer Assistance (beyond normal support infrastructure provided to all API Developers):
+Rates vary according to time and depth of technical assistance required.
+Restrictions
+Participation in the Patient Access API Program is only available to developers whose applications will solely utilize NextGen Patient Access APIs.
+Participation in the Open Access Developer Program is limited solely to current NextGen Healthcare clients who have licensed NextGen® Enterprise EHR v. 5.9.0 or higher and have established a mutually executed API Terms of Service Agreement (with Open Access Developer terms) with NextGen Healthcare. This can be initiated by completing the online API Onboarding form.
+Participation in the API Distributor Program is limited to 3rd Party Vendors and requires execution of an API Terms of Service Agreement specifying API Distributor Program terms. This can be initiated by completing the online API Onboarding form.
+Limitations
+Enterprise APIs
+The Global Service Account (“GSA”) is the only Enterprise API authentication model that enables applications to use NextGen Enterprise APIs without requiring a NextGen Enterprise User to launch the application from within NGE. User-level Enterprise API authentication is available for apps integrating with NGE versions 5.9.2 and higher via the External Application Launcher feature released in 2022.
+GSA authentication enables use of most Enterprise API Routes, but certain routes (e.g. those requiring provider-level permissions/auditing) are not available to apps when authenticated via the GSA method. All Enterprise API routes (including those prohibited under GSA) are accessible to API-powered applications when using the External Application Launcher authentication method. The External Application Launcher method is an additional authentication option for API-powered apps integrating with NextGen Enterprise system running version 5.9.2 and higher.  Please refer to the “Enterprise GSA Routes” tab of the NGE API Data Details Grid (.xlsx) for specifics.
+There are slight differences between supported NGE versions (v5.9.0+) in the API response data for certain USCDI data elements. Please refer to the “Enterprise API, C-CDA, HL7” tab of the NGE API Data Details Grid (.xlsx) for specifics.
+Patient Access APIs
+Specifics regarding Patient Access API support for USCDI Data Categories are available in the “Patient API” tab of the NGE API Data Details Grid (.xlsx).
+Obligations
+Clients of NextGen Healthcare eligible to develop an API app via the Open Access Developer Program are expected to utilize their existing non-production NextGen® Enterprise EHR environment(s) for application QA testing & validation prior to production deployment.
+Terms of Service: API Terms of Service for read-only access (i.e. GET) to USCDIv1 data are available at https://www.nextgen.com/api/terms-of-service. Additional terms will be applicable to a developer interested in accessing (via APIs for NextGen® Enterprise EHR v.5.9.0+) data that are beyond the scope of read-only USCDIv1 access will depend upon multiple factors, including scope of data needs, developer  program type, etc.
+Registration Process Requirements
+General Requirements for Application Development:
+All developers interested in becoming an API Developer must initiate engagement with NextGen Healthcare by completing the online API Onboarding form. Completion of the API Onboarding form is required unless you meet either of the following criteria:
+You are a developer who intends to develop an app under the Patient Access API Program;
+You are a developer whose app will only utilize data within the scope of certified technology (i.e. data access limited solely to USCDIv1 GET routes). If this is the case, you are strongly encouraged to engage NextGen Healthcare via the Onboarding form to obtain detailed process guidance and support details, however completing the onboarding form is not a requirement.
+Developers who complete the API Onboarding form will receive an email with details & next steps, including instructions on how to self-register at the NextGen API Developer Portal.
+Note: Developer Portal registration is required for all developers; this step is needed for:
+(Required): Creation of application authentication credentials needed for production integrations with NextGen Healthcare client systems
+(Optional): Access to Sandbox Testing resources.
+Developer Portal registration is not needed to access the regulatorily required API technical & business documentation available on this page, www.nextgen.com/api, and via the links therein.
+The NextGen API Developer Portal includes extensive guidance information in the Wiki section, including a structured Getting Started guide, FAQ content, and sandbox testing capabilities for both NextGen Patient Access APIs & NextGen® Enterprise APIs.
+Additional Registration Process Requirements apply based on the category of NextGen APIs chosen for application development (either Patient Access APIs or Enterprise APIs). Please proceed to the appropriate section below based on the API category intended for use in application development.
+Requirements for Patient Access API Application Deployment:
+Developers creating a Patient Access application powered by NextGen FHIR APIs must self-register at the NextGen API Developer Portal to establish the required application credentials described in the note above.
+Developers creating a Patient Access application powered by NextGen FHIR APIs may proceed to production deployment to NextGen clients at their own discretion once they have completed development and have thoroughly tested their application using the test patient credentials provided in both the API Developer Portal and in the NextGen Patient Access API Authentication Guide.
+Prior to going to production, NextGen requests each Patient Access API developer:
+Notify NextGen (via APIpartners@nextgen.com) of their intention to begin support of production integrations of their application;
+Provide NextGen (via APIpartners@nextgen.com) with detailed requirements that individual NextGen Healthcare client practices must satisfy before their patients are able to utilize the Patient Access API application.
+Requirements for NextGen Enterprise User-Facing API Application Deployment:
+Developers creating an application for Provider Organizations (powered by proprietary Enterprise APIs or FHIR APIs) may only proceed to Beta Testing with NextGen Healthcare clients when each of the following requirements have been satisfied:
+The developer has created and correctly configured their application entry in the NextGen Developer Portal according to the guidance information provided in the Developer Portal Getting Started Wiki content (which results in creation of the application credentials necessary for OAuth2 authentication);
+In cases where the developer is accessing data beyond the scope of certified technology (i.e. if data access is not limited to USCDIv1 GET routes), the developer has become a NextGen API Developer (via a mutually executed API Terms of Service Agreement between their organization and NextGen Healthcare); this process must be initiated via the API Onboarding form described in the General Requirements above;
+The API Developer  has completed initial application development using the sandbox testing capabilities provided via the API Developer Portal;
+The API Developer has completed all applicable Pre-Beta requirements, including:
+Submission of a detailed route list for their application (required, unless your app's data access is limited solely to USCDIv1 GET routes)
+Verification of creation of a Beta Test Plan (optional)
+Any requisite client-facing documentation (optional);
+When the above requirements to begin Beta have been met and your organization has identified the client(s) who will Beta test your App:
+Please download and carefully review each of the two Beta PDF Guidance documents that apply to your app, then follow the instructions in the "API Developer Beta Guidance" PDF.
+Beta Document #1: API Developer Beta Guidance (You will choose only one of two versions of this document - see below.)
+Beta Document #2: Guidance For Beta Clients
+API Developer Beta Guidance Documentation (Beta Document #1)
+This document is for YOU as the App Vendor & API Developer .
+This PDF contains consent language that you are required to first customize and then provide to each Beta Client per the instructions provided within.
+(Choose one): Only one of the two versions of Beta Document #1 applies to your app. Select the appropriate link below based on the scope of your app's data access needs:
+USCDIv1 Read Only Enterprise API Apps - Click to view/download PDF
+All Other Enterprise API Apps (Requiring USCDIv1 write access and/or any access to non-USCDIv1 data) - Click to view/download PDF
+Guidance For Beta Clients (Beta Document #2)
+This PDF is for each NextGen Healthcare Client acting as a Beta site for your app; this material will help frame their expectations for the Beta process and offer them important & helpful guidance.
+You are required to send this PDF to appropriate stakeholders at each Beta Client (see Beta Document #1 for details) - Click to view/download PDF
+Developers creating an application powered by NextGen® Enterprise APIs may declare their application to be Generally Available (optional) and proceed to engage NextGen Healthcare clients at large when each of the following requirements have been satisfied (optional but recommended):
+NextGen has received (via email sent directly from the Beta Client to apipartners@nextgen.com) sign-off approval that the app is working as designed to their satisfaction.
+NextGen has determined that the API-powered solution is integrated successfully in a Production environment.
+NextGen approves the API Developer application’s release from Beta and declares the API Developer's application to be Generally Available (optional).
+Technical Documentation
+For All Developers:
+Application Request & Configuration Process
+For Enterprise API Developers:
+Online Enterprise API Documentation for App Developers (Enterprise API Routes for USCDIv1 Data)
+NGE API Data Details Grid (.xlsx)
+GSA Authentication Documentation & Implementation Guide (for Enterprise API Apps)
+For Patient Access API Developers:
+Patient Access API Documentation
+Patient Access API Client Search
+Patient Access API Authentication Guide (for Patient Access API Apps)
+Developer Program & Onboarding
+Developer Program Information:
+Open Access Developer Program (NextGen Healthcare Clients Only)
+Our Open Access Developer Program is designed especially for clients that want to develop their API application for their own use. There is no fee to participate in the development phase or the deployment phase. If an API application developed by a NextGen Healthcare client is deemed beneficial to other NextGen Healthcare clients, members are offered the option to move toward the API Distribution Program to release the application to the NextGen Healthcare community.
+API Distribution Program
+The NextGen Healthcare API Distribution program is a full-service development platform that provides all the tools and documentation you need to develop and launch an API app for the NextGen Healthcare community. There is no charge to develop your API application or use our platform with our API Sandboxes (see “Fees” under “Terms of Service” section above for details). API Distributors have the option to engage in our value-add services and other strategic opportunities. Our goal remains to bring innovative applications to our client base that will increase workflow efficiencies while improving patient care and outcomes.
+Onboarding Process:
+Clients & 3rd Party Vendors interested in becoming a NextGen API Developer should browse the available API Developer Programs. Select the “Learn More” link beneath the most applicable program description on the Developer Program page to proceed to the API Onboarding Form and apply for Developer Program participation.
+Developers will receive an email with further information and guidance following submission of the API Onboarding Form.
+Terms of Service
+Please visit www.nextgen.com/api/terms-of-service for the general API Terms of Service agreement, which applies to vendors using NextGen Healthcare Certified APIs for read-only access to regulatorily required USCDI data (GET routes only).
+An additional (or addended) API Terms of Service agreement is required to access data beyond the scope of read-only (GET) access to USCDI data; vendors who are interested in additional data access should indicate their data needs in the API Developer Program onboarding form.

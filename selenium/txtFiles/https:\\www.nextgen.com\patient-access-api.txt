@@ -1,0 +1,36 @@
+Public Documentation for the NextGen® Patient Access API
+NextGen Patient Access API for NextGen® Enterprise EHR
+The FHIR-based Patient Access API is for developers creating Apps intended to empower patients with access to their own personal health data in a NextGen Enterprise practice via API.
+NextGen Enterprise Patient Access API Documentation
+Route-level documentation for the FHIR R4 API is available at https://www.nextgen.com/api/nge-fhir-r4
+Route-level documentation for the FHIR DSTU2 API is available here.
+These pages also include a link near the top to obtain the “swagger” JSON file for the Patient Access API.
+Additional Information
+Patient Access API App Developers may now use the Practice Search page at https://www.nextgen.com/api/practice-search to see if a given Practice has installed and configured Patient Access API in their NextGen® Enterprise EHR system.
+Authentication & Data Endpoints:
+OAuth2 Authorization Endpoint: https://fhir.nextgen.com/nge/prod/patient-oauth/authorize
+OAuth2 Token Endpoint: https://fhir.nextgen.com/nge/prod/patient-oauth/token 
+NextGen Patient Access API Base URL (to combine with the individual route endpoints listed in the above documentation page/swagger json):
+DSTU2 (Certified) Version Base URL: https://fhir.nextgen.com/nge/prod/fhir-api/fhir/dstu2/
+R4 Version Base URL: https://fhir.nextgen.com/nge/prod/fhir-api-r4/fhir/r4/
+Please see the information within the Patient Access APIs and regulatory compliance section of https://www.nextgen.com/partner-program for additional details and process steps.
+There are no contracting requirements for the provisioning of data via Patient Access APIs for NextGen® Enterprise EHR v5.9.0+; NextGen Healthcare will be provisioning patient data through these APIs.
+For Patient Access to USCDI Reads (GETs), there is no requirement for contracting (i.e. executing an API Terms of Service Agreement) with NextGen Healthcare.
+NextGen Office YourHealthFile® Patient API
+The FHIR-based NextGen Office YourHealthFile Patient Access API is for developers creating Apps intended to empower patients with access to their own personal health data in a NextGen Office practice via API.
+NextGen Office Patient Access API Documentation
+FHIR R3 + C-CDA > Route-level NextGen Office Patient Access API documentation is available here:  https://petstore.swagger.io/?url=https://hfstatic.s3.amazonaws.com/swagger/fhir-swagger.yaml
+FHIR R4 + C-CDA > Route-level NextGen Office APIs documentation is available here: https://petstore.swagger.io/?url=https://hfstatic.s3.amazonaws.com/swagger/swaggerR4.yaml#/
+Additional Information
+Authentication & Data Endpoints:
+NGO OAuth2 Authorization Endpoint (FHIR R3/FHIR R4): https://idp-prod.prod.ngo.nextgenaws.net/auth/realms/nextgen/protocol/openid-connect/auth
+NGO OAuth2 Token Endpoint (FHIR R3/FHIR R4): https://idp-prod.prod.ngo.nextgenaws.net/auth/realms/nextgen/protocol/openid-connect/token 
+NGO Patient Access API FHIR R3 Base URL: https://fhir.meditouchehr.com/api/fhir/
+NGO Patient Access API FHIR R4 Base URL: https://fhir.meditouchehr.com/api/fhir/r4
+Developer Guides:     
+FHIR R3 + C-CDA > Please see the NextGen Office YourHealthFile Patient API R3 Developer Guide for the developer application registration process and detailed walk through steps using the API.
+FHIR R4 + C-CDA > Please see the NextGen Office FHIR R4 Developer Guide for the developer application registration process and detailed walk through steps for using the API.
+Terms of Use
+There are no contracting requirements for the provisioning of data via NextGen Office YourHealthFile® Patient APIs for NextGen® Office (5.0+). NextGen Healthcare will be provisioning patient data through these APIs.
+For Patient Access to USCDI Reads (GETs), there is no requirement for contracting (i.e. executing an API Terms of Service Agreement) with NextGen Healthcare.
+For additional Regulatory Information, please review our NextGen Office API Section 170.404 Regulatory Information page.

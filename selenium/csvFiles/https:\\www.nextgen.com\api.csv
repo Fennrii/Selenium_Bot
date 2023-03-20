@@ -1,0 +1,66 @@
+ , 
+NextGen Patient Access APIs
+(Apps for Patients)
+, 
+ NextGen Enterprise &amp; FHIR APIs
+(Apps for Provider Organizations)
+
+
+Technical Info &amp; Data Standards
+, 
+Read-Only RESTful API endpoints that provide patient data
+                                    using the
+                                    FHIR data standard (DSTU &amp; R4).
+, 
+RESTful APIs (500+ routes) enabling Read and Write
+                                    transactions across an
+                                        expansive array of EHR data using a proprietary NextGen JSON data
+                                    standard. FHIR APIs may also be used for NGE Client-Facing applications.
+
+
+User Audience
+, 
+Apps powered by Patient Access APIs are used by individual patients
+                                    of NextGen Practices.
+, 
+Apps powered by Enterprise APIs (and FHIR -powered apps that are not for the Patient Access use case) are intended for NextGen Enterprise
+                                        Users.
+
+
+Functional Scope
+, 
+Patient Access API Apps let patients of a NextGen Practice access their own
+                                        personal health
+                                        data within that Practice's NextGen Enterprise system via API using a
+                                    web-based or
+                                    native mobile application.
+, 
+NGE user-facing apps (powered by Enterprise and/or FHIR APIs) integrate with NextGen Enterprise (5.9.0+) to add value &amp;
+                                    expand functionality for NextGen Clients across an extensive variety of clinical,
+                                        administrative, and
+                                        other functions.
+
+
+Developer Program Info
+, 
+Program details for Patient Access API Developers are provided in the Patient
+                                        Access APIs and
+                                        Regulatory Compliance section of www.nextgen.com/partner-program.
+                                
+, 
+Program options for Clients or 3rd Party Vendors developing
+                                    Enterprise or FHIR API Apps intended for NGE Users include
+                                    the Open Access Developer and API
+                                        Distributor programs
+                                    described at www.nextgen.com/developer-program.
+
+
+Technical Documentation
+, 
+FHIR API Documentation for Patient Access is publicly available via www.nextgen.com/patient-access-api.
+, 
+Access to full technical documentation for Enterprise APIs (and FHIR APIs for NGE user-facing apps) is provided following
+                                    submission of developer details to
+                                    NextGen – links on the Developer Program page lead to the appropriate API
+                                    Onboarding Form. Enterprise API documentation for USCDIv1 data is available here.
+
